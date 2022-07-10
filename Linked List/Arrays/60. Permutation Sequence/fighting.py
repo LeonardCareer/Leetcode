@@ -1,6 +1,5 @@
 class Solution:
     def getPermutation(self, n: int, k: int) -> str:
-        result = []
         myNums = [i for i in range(1, n + 1)]
 
         def getNumbers(number: int, kth:int):
