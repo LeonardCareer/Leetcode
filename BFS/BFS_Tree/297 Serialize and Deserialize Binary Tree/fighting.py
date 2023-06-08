@@ -11,9 +11,9 @@ class Codec:
         result = []
 
         def dfs(node):
-            if node.val == None:
+            if node == None:
                 result.append("N")
-                return
+                return None
             result.append(str(node.val))
             dfs(node.left)
             dfs(node.right)
@@ -32,7 +32,7 @@ class Codec:
 
         self.i = 0
         def dfs():
-            if values[i] == "N":
+            if values[self.i] == "N":
                 self.i += 1
                 return None
             node = TreeNode(int(values[self.i]))
@@ -54,9 +54,9 @@ class Codec:
 # ans = deser.deserialize(ser.serialize(root))
         
 
-test = Codec()
-input1 = TreeNode(3, TreeNode(9, None, None), TreeNode(20, TreeNode(15, None, None), TreeNode(7,  None, None)))
-print(test.deserialize(test.serialize(input1)))
+# test = Codec()
+# input1 = TreeNode(3, TreeNode(9, None, None), TreeNode(20, TreeNode(15, None, None), TreeNode(7,  None, None)))
+# print(test.deserialize(test.serialize(input1)))
 
 
         
